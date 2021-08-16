@@ -1,9 +1,9 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 const calculate = require("../insuranceCalculator.js");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
+router.get("/", (req, res, next) => {
   res.render("index", { title: "Express" });
 });
 
@@ -18,11 +18,6 @@ router.post("/api", (req, res, next) => {
     console.log(error);
     next(error);
   }
-});
-
-/* GET home page. */
-router.get("/api", function (req, res, next) {
-  res.send("successful");
 });
 
 module.exports = router;

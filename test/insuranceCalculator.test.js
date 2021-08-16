@@ -1,12 +1,12 @@
-let chai = require("chai");
-let expect = require("chai").expect;
-let request = require("request");
-let chaiHttp = require("chai-http");
-let should = chai.should();
+const chai = require("chai");
+const chaiHttp = require("chai-http");
+const should = chai.should();
 
 chai.use(chaiHttp);
 
+//Test to ensure that the calculator API is working
 describe("Insurance cost calculator API", function () {
+  //Testing with a given array of numbers
   describe("In the case of correct input: ", function () {
     it("It should return the correct insurance cost", function (done) {
       let array = {
@@ -25,6 +25,7 @@ describe("Insurance cost calculator API", function () {
     });
   });
 
+  //Testing with an array containing an incorrect input
   describe("In the case of incorrect input: ", function () {
     it("It should return a 500 status", function (done) {
       let array = {

@@ -20,7 +20,4 @@ const calculate = (arrayOfNumbers) => {
   }
 };
 
-console.log(calculate([5, 25, 55, 105]));
-console.log(calculate([5]));
-
 module.exports = calculate;
